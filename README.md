@@ -1,2 +1,2 @@
 # RSML
-Concept and implementation of the RuleSet Modeling Language.
+Concept and documentation of the RuleSet Modeling Language.
