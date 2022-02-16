@@ -1,0 +1,13 @@
+version: 1.0.0
+
+import:
+  - import_me.rsml.yaml
+
+---
+
+# no fields defined
+
+---
+
+inheritsImported(importableRuleset):
+  ruleC: <even more rule content>

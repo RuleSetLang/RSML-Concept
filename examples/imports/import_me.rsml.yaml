@@ -1,0 +1,15 @@
+version: 1.0.0
+
+---
+
+# no fields defined
+
+---
+
+importableRuleset:
+  ruleA:
+    - some
+    - list
+    - rule
+    - content
+  ruleB: <more rule content>
