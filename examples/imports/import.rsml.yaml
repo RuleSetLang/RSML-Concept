@@ -1,7 +1,13 @@
 version: 1.0.0
 
+import: import_me.rsml.yaml # If you import just one file, a statement like this is fine.
+
+import: other_file.rsml.yaml # Though YAML requires unique keys, thus you can't use multiple imports.
+
+# Instead you'd simply supply a list like this:
 import:
   - import_me.rsml.yaml
+  - other_file.rsml.yaml
 
 ---
 
@@ -9,5 +15,5 @@ import:
 
 ---
 
-inheritsImported(importableRuleset):
+InheritsImported (ImportableRuleset): # This ruleset inherits from another imported one.
   ruleC: <even more rule content>
