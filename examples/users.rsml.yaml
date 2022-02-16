@@ -1,0 +1,24 @@
+version: 1.0.0
+
+---
+
+# no further input fields defined here
+
+---
+
+Username:
+  allow: # Strict allow list -> disallow everything else
+    - ~letters # There are certain keywords you can use here to represent groups of chars like numbers or letters they are marked with a tilde
+    - ~numbers
+    - _ # This allows the char '_'
+    - .
+  disallow:
+    - xX # Because this is kinda cringe
+    - Xx
+  length: 3-20 # Here's syntactic sugar for ranges
+
+
+UsernameGoneWrong: # This is to demonstrate char group keywords gone wrong
+  allow:
+    - \~numbers # This escapes the tilde and thus allows the string literal "~numbers", not the group of all numbers. 
+    - numbers # This allows the string literal "numbers", a tilde is mandatory.
